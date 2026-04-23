@@ -58,7 +58,7 @@ resource "aws_security_group" "web" {
 
 resource "aws_security_group" "private_service" {
   name        = "${var.project_name}-private-sg"
-  description = "Service interne privé"
+  description = "Service interne prive"
   vpc_id      = aws_vpc.main.id
 
   ingress {
@@ -70,7 +70,7 @@ resource "aws_security_group" "private_service" {
   }
 
   ingress {
-    description     = "Accès HTTP interne depuis web"
+    description     = "Acces HTTP interne depuis web"
     from_port       = 8080
     to_port         = 8080
     protocol        = "tcp"
